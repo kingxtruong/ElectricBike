@@ -67,10 +67,10 @@ class PageController extends Controller
     	}
 
 
-    	var_dump("hello heroku");
-    	exit();
+//     	var_dump("hello heroku");
+//     	exit();
 	    
-    	//return view('pages.home-page',compact('product_hot1','product_hot2','products_hot','arr_colors_hot1','arr_colors_hot2','arr_colors_hot','products_new1','products_new2','products_new3','arr_colors_new1','arr_colors_new2','arr_colors_new3'));
+    	return view('pages.home-page',compact('product_hot1','product_hot2','products_hot','arr_colors_hot1','arr_colors_hot2','arr_colors_hot','products_new1','products_new2','products_new3','arr_colors_new1','arr_colors_new2','arr_colors_new3'));
     }
     public function getProducts(){
     	$products=Product::where('id','>',0)->paginate(25);
